@@ -36,7 +36,7 @@ function xo()
    {
    
     text.innerHTML=`${winner} won &#127881`;
-   
+    
    }
   
   else if(tie)
