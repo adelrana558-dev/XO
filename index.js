@@ -34,14 +34,34 @@ function xo()
    const winner=checkWin();
    if(winner)
    {
-   
     text.innerHTML=`${winner} won &#127881`;
     
+    setTimeout(()=>{
+      text.innerHTML='play &#128568'
+     const buttons=document.querySelectorAll('.game-border button');
+     buttons.forEach((btn)=>{
+     btn.textContent='';
+
+     });
+     localStorage.removeItem('xoState');
+    },1500);
+   
    }
   
   else if(tie)
    {
    text.innerHTML='Its a tie &#128540';
+
+
+    setTimeout(()=>{
+      text.innerHTML='play &#128568'
+     const buttons=document.querySelectorAll('.game-border button');
+     buttons.forEach((btn)=>{
+     btn.textContent='';
+
+     });
+     localStorage.removeItem('xoState');
+    },1500);
    }
    
    })
