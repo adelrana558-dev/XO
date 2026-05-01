@@ -31,17 +31,20 @@ function xo()
     }  
   saveToStorage();
    const tie=checkTie();
-   const winner=checkWin();
-   if(winner)
+   const res=checkWin();
+   if(res)
    {
+    const{winner,combo}=res;
     text.innerHTML=`${winner} won &#127881`;
-    
+    combo.forEach(el=>{
+      button[el].style.background="linear-gradient(to right,green,yellow)"
+    });
     setTimeout(()=>{
       text.innerHTML='play &#128568'
      const buttons=document.querySelectorAll('.game-border button');
      buttons.forEach((btn)=>{
      btn.textContent='';
-
+    btn.style.background="";
      });
      localStorage.removeItem('xoState');
     },1500);
@@ -111,9 +114,9 @@ function checkWin()
    const val1=buttons[a].textContent;
    const val2=buttons[b].textContent;
    const val3=buttons[c].textContent;
-   if(val1===val2&&val2===val3)
+   if(val1&&val1===val2&&val2===val3)
    { 
-    return val1;
+    return {winner:val1,combo:combo};
     
    }
   }
