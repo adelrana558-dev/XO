@@ -38,17 +38,7 @@ body {
  
   cursor: pointer;
 }
-.reset-score{
-   position: fixed;
-    background-color: rgb(189, 107, 171);
-    margin-top:650px;
-    margin-left:45%;  
-    width:130px;
-    height: 30px;
-    border-radius: 30px;
-    border-color: rgb(139, 0, 102);
 
-}
 h1{
   position: fixed;
  display: flex;

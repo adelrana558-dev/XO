@@ -57,7 +57,7 @@ function xo()
 
 
     setTimeout(()=>{
-      text.innerHTML='play &#128568'
+      text.innerHTML='Play &#128568'
      const buttons=document.querySelectorAll('.game-border button');
      buttons.forEach((btn)=>{
      btn.textContent='';
